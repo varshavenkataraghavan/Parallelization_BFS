@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parallel/Serial BFS Visualization</title>
+  <script src="https://unpkg.com/cytoscape@3.19.0/dist/cytoscape.min.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    button, input[type="file"], select {
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="file"] {
+      background-color: #4b0082;
+    }
+    select {
+      background-color: #5a189a;
+    }
+    #cy {
+      width: 800px;
+      height: 600px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    #output {
+      white-space: pre-wrap;
+      margin-top: 20px;
+      background: white;
+      padding: 10px;
+      width: 800px;
+      height: 200px;
+      border: 1px solid #ccc;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+  <h2>BFS Simulation (Serial / Parallel)</h2>
+  <input type="file" id="graph-file" accept=".txt">
+  <select id="mode-select">
+    <option value="parallel" selected>Parallel</option>
+    <option value="serial">Serial</option>
+  </select>
+  <div id="cy"></div>
+  <div id="output"></div>
+</body>
+</html>

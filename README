@@ -1,0 +1,34 @@
+Parallelized Implementation of Breadth First Search Algorithm for Graph Traversal
+
+Objectives of this program : 
+
+1. Implement a parallelized Breadth-First Search (BFS) algorithm to accelerate graph traversal.
+2. Focus on improving execution time and scalability through parallel processing.
+3. Utilize OpenMP with C along with a front-end implementation via HTML to distribute computation efficiently across hardware resources.
+4. Enhance workload distribution for better resource utilization and performance improvements.
+
+The files in this repository : 
+
+bfs.c : The main program being executed, which parallelizes BFS traversal
+input.txt : A text file comprising of the adjacency matrix, preceded by the total number of nodes as the first line and the starting node as the second line
+gen.py : An optional script which the user can run if they wish to generate their custom input.txt file
+server.py : Provides the front-end connection of the program to the HTML file via APIs 
+index.html : Displays the front-end of the project
+script.js : A script running in the background of the program
+thread_log.txt : Keeps a log of all the traversals covered in the graph
+HP_Project_Final.pptx : The final project presentation report
+
+How to execute this program :
+
+Open command prompt on your system
+Type the following :
+
+gcc -fopenmp bfs.c -o bfs.out 
+
+uvicorn server:app --reload
+
+Then, navigate to the web folder and click on index.html.
+
+Now, choose between serial mode and parallel mode, and then drag and drop input.txt. If you want, you can also generate your own custom input file by editing and running gen.py
+
+Observe the output accordingly
