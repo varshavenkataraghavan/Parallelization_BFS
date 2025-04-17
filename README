@@ -27,7 +27,7 @@ gcc -fopenmp bfs.c -o bfs.out
 
 uvicorn server:app --reload
 
-Then, navigate to the web folder and click on index.html.
+Then, click on index.html.
 
 Now, choose between serial mode and parallel mode, and then drag and drop input.txt. If you want, you can also generate your own custom input file by editing and running gen.py
 
